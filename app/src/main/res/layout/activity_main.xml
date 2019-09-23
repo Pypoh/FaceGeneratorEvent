@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:id="@+id/text_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Face Generator"
+            android:textSize="32sp"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <FrameLayout
+            android:id="@+id/layout_face"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/text_header"
+            android:layout_marginTop="24dp"
+            >
+
+            <ImageView
+                android:id="@+id/image_head"
+                android:layout_width="match_parent"
+                android:layout_height="224dp"
+                app:srcCompat="@drawable/body"
+                android:layout_marginTop="16dp"/>
+
+            <ImageView
+                android:id="@+id/image_hair"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                app:srcCompat="@drawable/hair" />
+
+            <ImageView
+                android:id="@+id/image_eyebrow"
+                android:layout_width="105dp"
+                android:layout_height="19dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="64dp"
+                app:srcCompat="@drawable/eyebrow" />
+
+            <ImageView
+                android:id="@+id/image_eyes"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="84dp"
+                app:srcCompat="@drawable/eyes" />
+
+            <ImageView
+                android:id="@+id/image_beard"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="140dp"
+                android:paddingBottom="4dp"
+                app:srcCompat="@drawable/beard" />
+
+            <ImageView
+                android:id="@+id/image_moustache"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="140dp"
+                app:srcCompat="@drawable/moustache" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/text_customize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="Customize Your Face!"
+            android:layout_marginTop="24dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@id/layout_face"
+            />
+
+        <LinearLayout
+            android:id="@+id/layout_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_customize"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/check_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Head"/>
+
+            <CheckBox
+                android:id="@+id/check_hair"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hair"/>
+
+            <CheckBox
+                android:id="@+id/check_eyebrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eyebrow"/>
+
+            <CheckBox
+                android:id="@+id/check_eyes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eyes"/>
+
+            <CheckBox
+                android:id="@+id/check_moustache"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Moustache"/>
+
+            <CheckBox
+                android:id="@+id/check_beard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Beard"
+                style="@style/Widget.AppCompat.CompoundButton.CheckBox" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/layout_checkbox"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="32dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
